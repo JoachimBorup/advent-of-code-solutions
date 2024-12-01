@@ -1,0 +1,33 @@
+# Executables without filename extensions
+*
+!/**/
+!*.*
+
+# macOS
+.DS_Store
+
+# IntelliJ IDEA
+.idea/
+out/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# Compiled class files
+*.class
+
+# Executables
+*.exe
+
+# C
+*.plist
+*.dSYM/
+
+# Haskell
+*.hi
+*.o
+
+# Test files
+secret.in
+secret.ans
