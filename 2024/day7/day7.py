@@ -1,3 +1,4 @@
+import math
 import sys
 
 equations = []
@@ -20,7 +21,8 @@ def can_be_made_true(test_value, numbers, operations):
 
 add = lambda x, y: x + y
 multiply = lambda x, y: x * y
-concatenate = lambda x, y: int(f'{x}{y}')
+concatenate = lambda x, y: x * (10 ** (math.floor(math.log10(y)) + 1)) + y
+# concatenate = lambda x, y: int(f'{x}{y}')
 
 print(f'Part 1: {sum(t for t, ns in equations if can_be_made_true(t, ns, [add, multiply]))}')
 print(f'Part 2: {sum(t for t, ns in equations if can_be_made_true(t, ns, [add, multiply, concatenate]))}')

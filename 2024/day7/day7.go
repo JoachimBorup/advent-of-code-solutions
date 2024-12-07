@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -18,10 +19,11 @@ func main() {
 
 	add := func(x, y int) int { return x + y }
 	multiply := func(x, y int) int { return x * y }
-	concatenate := func(x, y int) int {
-		combined, _ := strconv.Atoi(fmt.Sprintf("%d%d", x, y))
-		return combined
-	}
+	concatenate := func(x, y int) int { return x*(int)(math.Pow(10, math.Floor(math.Log10(float64(y)))+1)) + y }
+	// concatenate := func(x, y int) int {
+	// 	combined, _ := strconv.Atoi(fmt.Sprintf("%d%d", x, y))
+	// 	return combined
+	// }
 
 	part1, part2 := 0, 0
 	for _, eq := range equations {
