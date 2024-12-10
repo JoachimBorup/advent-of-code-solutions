@@ -16,13 +16,11 @@ part_1 = part_2 = 0
 
 for y, x in trailheads:
     stack = [(y, x)]
-    visited = set()
     reachable_nines = set()
     trailhead_rating = 0
 
     while stack:
         y, x = stack.pop()
-        visited.add((y, x))
 
         if grid[y][x] == '9':
             reachable_nines.add((y, x))

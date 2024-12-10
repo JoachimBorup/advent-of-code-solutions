@@ -19,14 +19,12 @@ func main() {
 	part1, part2 := 0, 0
 	for trailhead := range trailheads {
 		stack := []Point{trailhead}
-		visited := make(map[Point]bool)
 		reachableNines := make(map[Point]bool)
 		trailheadRating := 0
 
 		for len(stack) > 0 {
 			current := stack[len(stack)-1]
 			stack = stack[:len(stack)-1]
-			visited[current] = true
 
 			if grid[current.y][current.x] == '9' {
 				reachableNines[current] = true
